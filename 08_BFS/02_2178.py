@@ -3,18 +3,12 @@ from collections import deque
 
 n, m = map(int, sys.stdin.readline().split())
 
-maze = []
+maze = [list(map(int, input())) for _ in range(n)]
 dist = [[0 for _ in range(m)] for _ in range(n)]
 
 dx = [0, -1, 0, 1]
 dy = [1, 0, -1, 0]
 
-for _ in range(n):
-    s = input()
-    tmp = []
-    for i in range(m):
-        tmp.append(int(s[i]))
-    maze.append(tmp)
 
 dq = deque()
 dq.append([0, 0])
